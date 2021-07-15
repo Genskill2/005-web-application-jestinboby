@@ -18,7 +18,7 @@ def format_date(d):
 
 @bp.route("/search/<field>/<value>")
 def search(field, value):
-    conn = db.get(db)
+    conn = db.get_db()
     cursor = conn.cursor()
     oby = request.args.get("order_by", "id")
     order = request.args.get("order", "asc")
